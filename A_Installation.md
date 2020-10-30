@@ -26,7 +26,7 @@
 Pour utiliser `Symfony 5`, vous devrez avoir installé PHP 7.2.
 
 #### Composer
-Vous devez aussi installer `Composer`qui est le gestionnaire de packages de PHP et que vous pouvez téléchharger que le site https://get-composer.org.
+Vous devez aussi installer `Composer` qui est le gestionnaire de packages de PHP et que vous pouvez téléchharger que le site https://get-composer.org.
 
 Composer est essentiel dans les applications PHP, quelles qu'elles soient, car il permet deux choses :
 * l'installation (et la maintenance) des composants tiers;
@@ -201,6 +201,30 @@ Un “environnement” constituele cadre dans lequel l'application s'exécute. I
 * `test` qui est un environnement activé automatiquement lors de l'exécution de procédures des tests autimatisés.
 
 
+### Affichage
+
+Une fois le code de base de la plate-forme installé, nous pouvons aller directement dans un navigateur et chercher à afficher quelque chose. L'adresse devrait ressembler à quelque chose comme :
+```http
+http://<_domaine-ou-adresse-IP_>/<_dossier-de-la-plate-forme_>/public/index.php
+```
+Comme expliqué un peu plus haut, ke point dentrée de l'application n'est pas _à la racine_, mais dans le sous-dossier `public`.
+
+Symfony affiche donc, « out of the box », une page qui nous indique que tout fonctionne et contenant notamment le uméro de version de Symfony.
+
+En pied de page, nous remarquons un bloc horizontal; c'est le **profileur**, un outil qui nous donnera plein d'informations utiles à propos du déroulement des requêtes, des erreurs, du temps d'exécution, de l'utilisateur connecté, etc.
+
+Cette page s'affiche parce que nous n'avons pour l'instant rien précisé à Symfony, en particulier comment trouver la page d'accueil de l'application. Ce que nous voyons n'est donc pas une page par défaut, mais devrait plutôt être considérée comme une page d'erreur. D'ailleurs, si l'on regarde dans le profileur, on verra qu'ilnous signale une erreur 404, signifiant qu'il n'a pas trouvé la page que nous lui avons demandée.
+
+### Gestion de la réécriture d'URL
+
+En cas de besoin, et si `Apache` est votre serveur HTTP, vous pouvez installer le package :
+```bash
+composer require symfony/apache-pack
+```
+Cela aura pour effet d'installer un fichier `.htaccess` dans le dossier `public` de votre installation pour bénéficier de la réécriture des URL.
+
+éanmoins, dans le cas général, si Apache est le serveur HTTP, on optera plutôt pour la définition de **Virtual Hosts**.
+
 ### Introduction à la ligne de commande
 
 La console est un outil essentiel pour le développeur. Beaucoup d'opérations se font via le terminal qui accélèrent et facilitent le travail d'écriture. Le commandes sont accessibles depuis la racine de l'application via les instructions :
@@ -231,6 +255,6 @@ symfony console make:entity --help
 
 * [Composer](https://get-composer.org)
 * [La commande `symfony`](https://symfony.com/download)
-* [Documentation Setup Symfony](https://symfony.com/doc/current/setup.html)
+* [Documentation pour l'installation de Symfony](https://symfony.com/doc/current/setup.html)
 * [L'architecture en `bundle`](https://symfony.com/doc/current/bundles.html)
 * [Les composants de Symfony](https://symfony.com/doc/current/components/index.html)
