@@ -262,21 +262,6 @@ La fonction `path` comme la fonction `controller` peuvent nécessiter des argume
 
 La différence entre les deux options tient dans le fait que `path` redéroule tout l'ensemble du cycle de la requête HTTP, alorque que `controller` se contente d'exécuter la méthode requise. Dans le cas général, cela n'aura pas beaucoup d'importance et l'on aura tendance à privilégier la solution la plus rapide, c'est-à-dire la deuxième.
 
-## Exercices
-
-* Création d'un premier contrôleur par la ligne de commande
-  * Ce contrôleur s'appellera `DefaultController`
-* Ecriture d'une page d'accueil pour le site
-  * Ajouter une page d'information (Qui sommes-nous ?)
-  * Cette page devra être accessible depuis la page d'accueil via un lien dont l'URL sera construit avec la fonction `path`
-* Ajout de ressources web dans le dossier `public`
-  * Définissez dans le dossier public un sous-dossier `css` pour mettre créer une feuille de styles
-  * Appelez cette feuille avec la fonction Twig `asset`
-* Construire une page qui affiche une liste de noms d'écrivains avec des titres de leurs livres; les livres ont un genre (roman, essai, etc.)
-  * Cette liste sera contenue dans un tableau statique de la classe de contrôleur
-  * Les titres sont cliquables et dans ce cas, j'affiche une autre page avec :
-  * le titre du livre
-  * un bloc qui affiche les livres du même genre (ce bloc sera appelé dynamiquement en faisant appel à un contrôleur  et à un gabarit d'affichage séparé)
 
 ## Ressources
 
