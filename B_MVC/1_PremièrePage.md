@@ -2,18 +2,15 @@
 
 ## Feuille de route
 
-* Explication de l'architecture MVC pour Symfony
-* Installation de Twig
-* Dossier des templates
-* Syntaxe de Twig
-  * variables
-  * filtres et fonctions
-  * hiérarchie de gabarits & mise en page
-  * inclusion de gabarits
-  * contrôleurs secondaires
-  * inclusion paresseuse
-  * variables globales
-* Présentation du profileur
+1.Résumé des syntaxes
+  1. Console
+  2. Twig
+2. Notes
+  1. Introduction
+  2. MVC
+  3. Le cycle de la requête
+  4. Construction d'une vue 
+3. Ressources
 
 ## Résumé des syntaxes
 
