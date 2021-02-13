@@ -296,9 +296,9 @@ Tous les détails sont dans les documentations  d'`Alice` et `AliceBundle`.
 
 ## Ressources
 
-[DataFixtures dans Symfony](https://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html)
-[Le code source de DataFixtures](https://github.com/doctrine/data-fixtures)
-[Faker — François Zaninitto](https://github.com/fzaninotto/Faker)
-[FakerPHP — Anfreas Möller](https://github.com/FakerPHP)
-[Alice](https://github.com/nelmio/alice)
-[Hautelook AliceBundle](https://github.com/hautelook/AliceBundle)
+* [DataFixtures dans Symfony](https://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html)
+* [Le code source de DataFixtures](https://github.com/doctrine/data-fixtures)
+* [Faker — François Zaninitto](https://github.com/fzaninotto/Faker)
+* [FakerPHP — Anfreas Möller](https://github.com/FakerPHP)
+* [Alice](https://github.com/nelmio/alice)
+* [Hautelook AliceBundle](https://github.com/hautelook/AliceBundle)
