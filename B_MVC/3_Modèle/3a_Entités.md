@@ -9,11 +9,11 @@
 | Commande | Explication |
 |----|-----|
 | make:entity | Création d'un entité |
-| doctrine:create:database | Création une base de données |
-| doctrine:schema:create | Création le schéma d'une base de données |
-| doctrine:schema:update | Mise à jour le schéma d'une base de données |
-| make:migration | Création une migration |
-| doctrine:migration:migrate | Mise à jour le schéma d'une base de données via une migration |
+| doctrine:create:database | Création d‘une base de données |
+| doctrine:schema:create | Création du schéma d'une base de données |
+| doctrine:schema:update | Mise à jour du schéma d'une base de données |
+| make:migration | Création d‘une migration |
+| doctrine:migration:migrate | Mise à jour du schéma d'une base de données via une migration |
 
 ### Annotations
 
