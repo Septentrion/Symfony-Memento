@@ -7,7 +7,7 @@
 ### Packages
 
 | Package | Recipe | Explication |
-|----|-----|
+|----|---|-----|
 | **orm-fixtures** | * | Le bundle DataFixtures de Doctrine |
 | **fzaninotto/faker** |   | Le générateur de données Faker de F. Zaninotto (obsolescent) |
 | **fakerphp/faker** |   | FakerPHP, un fork de Faker maintenu |
@@ -25,7 +25,7 @@
 #### DataFixtures
 
 | Fonction | Signature | Explication |
-|----|-----|
+|----|----|---|
 | **load** | (ObjectManager) | Fonction de la classe de fixtures qui définit les données à créer|
 | **getDependencies** | () | Etablit les dépendances entre entités pour l'ordonnancement de la création de fixtures |
 | **getGroups** | () | Définit de groupes pour segmenter la création de fixtures |
