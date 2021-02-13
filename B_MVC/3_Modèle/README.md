@@ -42,4 +42,4 @@ Pour cela, Symfony a recours à — par défaut — recours à un ORM : **Doctri
 
 ## A suivre
 
-D'autres aspects avancés de doctrine sont traités ultérieurement.
+D'autres aspects avancés de Doctrine sont traités ultérieurement.
