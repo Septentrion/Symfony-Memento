@@ -18,17 +18,17 @@
     </tr>
   </thead>
   <tbody>
-    {% foreach p in person  }
+    {% for p in person  }
     <tr>
       <td class="prenom">{{ p.prenom }}</td>
       <td class="nom">{{ p.nom }}</td>
     </tr>
-    {% endforeach %}
+    {% endfor %}
     </tbody>
 </table>
 ```
 
-Filtres
+3. Filtres
 ```twig
 <div>
   {# Affichage du nom en majuscules #}
@@ -38,13 +38,23 @@ Filtres
 </div>
 ```
 
-Extension
+4. Inclusion
+```twig
+{# injection d'un gabarit auquel est transmis la variable `limit` — instruction #}
+{% include 'footer.html.twig' with {'limit': 3} %}
+{# injection d'un gabarit auquel est transmis la variable `limit` et un thème `dark` — fonction #}
+{% include('footer.html.twig', {'limit': 3}) | dark %}
+```
+
+5. Extension
 ```twig
 {# gabarit parent (layout.html.twig ) #}
 <body>
+{# Les blocs sont vide a priori #}
 {% block header %}{% endblock %}
 {% block main %}{% endblock %}
-{% block footer %}{% endblock %}
+{# Bloc contenant de l'information #}
+{% block footer %}<div>...</div>{% endblock %}
 ```
 
 ```twig
@@ -54,24 +64,26 @@ Extension
   <nav></nav>
 {% endblock %}
 {% block main %}
-  
+<section> ... </section>
 {% endblock %}
-{% block footer %}{% endblock %}
+{% block footer %}
+{# Conservation du contenu du bloc parent #}
+{{ parent() }}
+{% endblock %}
 ```
 
-Requête secondaire
+6. Requête secondaire
 ```twig
 <aside>
   <h1>Denières informations</h1>
-  {{ render_hinclude(controller('App\\Controller\\NewsController::latestNews'),  {
-      default: 'default/news.loading.html.twig',
+  {{ render(controller('App\\Controller\\NewsController::latestNews'),  {
       limit: 10
   }) }}
 </aside>
 ```
 
 
-Requête secondaire asynchrone
+7. Requête secondaire asynchrone
 ```twig
 <aside>
   <h1>Denières informations</h1>
