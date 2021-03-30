@@ -12,20 +12,20 @@
 
 | Annotation | Attributs | Explication |
 |---|---|---|
-| @Route | ('/slug', name='<nom-de-la-route>')  | L'annotation `@Route` définit le schéma de l'uRL qui déclencje le contrôleur |
+| @Route | ('/<slug>', name='<nom-de-la-route>')  | L'annotation `@Route` définit le schéma de l'uRL qui déclenche l'exécution du contrôleur |
 | @Template | ('templates/<nom-du-template>')  | L'annotation `@Template` définit le gabarit d'affichage de la ressource consultée. Elle évite de faire explicitement appel à la méthode `render` |
 
 ### Attributs (PHP 8)
 
 | Annotation | Explication |
 |---|---|
-| #[Route('/slug', name='<nom-de-la-route>')]  | Nouvelle syntaxe native de PHP 8 remplaçant les annotations |
+| #[Route('/<slug>', name='<nom-de-la-route>')]  | Nouvelle syntaxe native de PHP 8 remplaçant les annotations |
 
 ### Rendu
 
 | Fonction | Arguments | Explication |
 |---|---|---|
-| render | string, array)  | Construit la vue envoyée en réponse àla requête |
+| render | (string, array)  | Construit la vue envoyée en réponse à la requête |
 
 
 ## Twig
@@ -39,7 +39,7 @@
 | {% for variable in tableau %} ... {% endfor %} | Instruction ou structure de contrôle |
 | {% extends 'dossier/fichier' %} | Inclusion du gabarit dans une mise en page (“layout”) |
 | {% include 'dossier/fichier' %} | Inclusion d'un fragment Twig dans le gabarit |
-| {# v1 #} \| Commentaire |
+| {# v1 #} | Commentaire |
 | {{ v1 \| upper }} | Filtre : modifie la présentation de la valeur à gauche du “pipe” |
 | {{ '\<h1>titre\</h1>' \| raw }} | Insère le texte _en tant que code HTML_  et non comme une simple chaîne de caractères |
 
@@ -49,16 +49,17 @@
 
 | Syntaxe | Explication |
 |----|-----|
-| {{ asset(file) }} | Fonction |
+| {{ parent() }} | Ajoute dans le bloc le contenu du bloc parent (le comportement par défaut est le remplacement) |
+| {{ random() }} | Clcule une valeur aléatoire (voir les variantes dans la documnaetation) |
 
 ### Extensions pour Symfony
 
 | Syntaxe | Explication |
 |----|-----|
-| {{ asset(file) }} | Fonction |
-| {{ render(path) }} | Fonction affichant dans la page la réponse d'une route ou d'un contrôleur secondaire |
-| {{ render(controller) }} | Fonction affichant dans la page la réponse d'une route ou d'un contrôleur secondaire |
-| {{ render_hinclude(controller) }} | Fonction affichant dans la page la réponse d'une route ou d'un contrôleur secondaire |
+| {{ asset(file) }} | Trouve le ficher desuis le dozsier `public` de l'application  |
+| {{ render(path) }} | Affiche dans la page la réponse d'une route donnée |
+| {{ render(controller) }} | Affiche dans la page la réponse d'un contrôleur donné |
+| {{ render_hinclude(controller) }} | Affiche dans la page la réponse d'un contrôleur donné, de manière asynchrone |
 
 ### La notation pointée de Twig
 
