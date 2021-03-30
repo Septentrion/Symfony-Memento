@@ -12,7 +12,7 @@
 
 | Annotation | Attributs | Explication |
 |---|---|---|
-| @Route | ('/\slug\>', name='\<nom-de-la-route\>')  | L'annotation `@Route` définit le schéma de l'uRL qui déclenche l'exécution du contrôleur |
+| @Route | ('/\<slug\>', name='\<nom-de-la-route\>')  | L'annotation `@Route` définit le schéma de l'uRL qui déclenche l'exécution du contrôleur |
 | @Template | ('templates/\<nom-du-template\>')  | L'annotation `@Template` définit le gabarit d'affichage de la ressource consultée. Elle évite de faire explicitement appel à la méthode `render` |
 
 ### Attributs (PHP 8)
