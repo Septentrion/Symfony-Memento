@@ -12,14 +12,14 @@
 
 | Annotation | Attributs | Explication |
 |---|---|---|
-| @Route | ('/%slug%', name='%nom-de-la-route%')  | L'annotation `@Route` définit le schéma de l'uRL qui déclenche l'exécution du contrôleur |
-| @Template | ('templates/%nom-du-template%')  | L'annotation `@Template` définit le gabarit d'affichage de la ressource consultée. Elle évite de faire explicitement appel à la méthode `render` |
+| @Route | ('/\slug\>', name='\<nom-de-la-route\>')  | L'annotation `@Route` définit le schéma de l'uRL qui déclenche l'exécution du contrôleur |
+| @Template | ('templates/\<nom-du-template\>')  | L'annotation `@Template` définit le gabarit d'affichage de la ressource consultée. Elle évite de faire explicitement appel à la méthode `render` |
 
 ### Attributs (PHP 8)
 
 | Annotation | Explication |
 |---|---|
-| #[Route('/%slug%', name='%nom-de-la-route%')]  | Nouvelle syntaxe native de PHP 8 remplaçant les annotations |
+| #[Route('/\<slug\>', name='\<nom-de-la-route\>')]  | Nouvelle syntaxe native de PHP 8 remplaçant les annotations |
 
 ### Rendu
 
